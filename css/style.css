@@ -1,0 +1,11 @@
+.container{
+  display:grid;
+
+}
+img{
+  height: 150px;
+}
+header{
+  background-color: #000000;
+  color: #FFF;
+}
