@@ -5,6 +5,8 @@
     <link rel="shortcut icon" type="image/png" href="images/pawheart.png"/>
     <link rel= "stylesheet" type="text/css" href="css/style.css"/>
     <title> Abby Bogert</title>
+    <script src="https://kit.fontawesome.com/f2cded3c7e.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <a class = "skip" href = "#skip">Skip to Main Content</a>
@@ -15,21 +17,39 @@
       <nav>
         <ul class = "nav_links">
           <li class= "nav_item"><a href="index.html">About</a></li>
-          <li class= "nav_item"><a href="photogallery.html">Photo Gallery</a></li>
-          <li class = "nav_item"><a href="videogallery.html"> Video Gallery</a></li>
-          <li class= "nav_items"><a href="resume.html">Resume</a></li>
-          <li class= "nav_items"><a href="contact.html">Contact</a></li>
+          <li class= "nav_item"><a href="photogallery.html">Photos</a></li>
+          <li class = "nav_item"><a href="videogallery.html"> Videos</a></li>
+          <li class= "nav_item"><a href="resume.html">Resume</a></li>
+          <li class= "nav_item current"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <h2> Contact Form </h2>
-    <form>
-      <label for="name">Name:</label><input type ="text" id = "name" name="name" placeholder= "Name"/>
-      <label for ="phone">Phone Number:</label><input type ="number" name='phone' placeholder="Phone Number"/>
+    <form action = "https://formspree.io/xvoadgdj" method = "POST">
+      <fieldset >
+        <legend> Contact Form </legend>
+        <div class = "contact">
+          <label for="name">Name: </label><br>
+          <input type ="text" id = "name" name="name" placeholder= "Name"/><br><br>
+          <label for ="phone">Phone Number :</label><br>
+          <input type ="number" name='phone' placeholder="Phone Number"/><br><br>
+          <label for = "addr"> Address: </label><br>
+          <textarea type = "text" id = "addr" name = "address" placeholder ="Address"/></textarea><br><br>
+          <label for ="email"> Email: </label><br>
+          <input type = "email" id = "email" name = "email" placeholder = "Email"/><br><br>
+          <label for ="message"> Message: </label><br
+        </div>
+        <div>
+          <input type = "reset"/>
+          <input type = "submit"/>
+        </div>
+
+      </fieldset>
     </form>
     <footer class = "footer">
       <p> University of Michican School of Information <br/>
         &copy; Maya Genson - Web Design 2020</p>
+      <a href="https://www.instagram.com/abby.min.pin/" class="fab fa-instagram"></a>
+
     </footer>
   </body>
 </html>
