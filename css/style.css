@@ -14,12 +14,27 @@ header{
 .resume{
   padding-bottom: 15px;
 }
+.resume iframe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resume h1{
+  text-align: center;
+  color: #00274C;
+  font-family:"Rock Salt";
+  font-size: 35px;
+  text-shadow: 2px 2px #A8A8A8;
+}
 .nav_links{
   display:flex;
   flex-direction: row;
 
   justify-content: space-between;
   align-items: center;
+}
+ .container p{
+  font-family: "Lato", serif;
 }
 .fa-instagram{
   font-size: 30px;
@@ -35,6 +50,7 @@ ul{
 .current{
   text-decoration: underline;
 }
+
 .container{
   display:grid;
   grid-template-columns: 1fr;
@@ -58,11 +74,21 @@ ul{
 /* nav li a .nav_links{
   text-decoration: none;
 } */
+ h1{
+  text-align: center;
+  color: #00274C;
+  font-family:"Rock Salt", Lato, sans-serif;
+  font-size: 35px;
+  text-shadow: 2px 2px #A8A8A8;
+}
+
 .gallery img{
   margin-top: 8px;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* vertical-align: middle; */
-  width: 100%;
+  width: 75%;
   /* width: 100%;
   display: flex;
   flex-direction: column;
@@ -75,7 +101,53 @@ ul{
   /* max-width: 500px; */
   /* image-orientation: from-image; */
 }
-
+.gallery img:hover{
+  /* opacity: 0.5; */
+  filter: sepia();
+}
+/* Flip Card */
+.flip-card{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+}
+.flip-card-inner{
+  postion: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front{
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-front img{
+  width: 65%;
+  height: auto;
+}
+.flip-card-back{
+  font-family: "lato";
+  font-size: 20px;
+  background-color: #bbb;
+  color: #00274C;
+  transform: rotateY(180deg);
+}
 fieldset{
   border-radius: 15px;
 }
@@ -85,13 +157,10 @@ legend{
 .gallery{
   display: flex;
   flex-direction: column;
-  /* flex: 25%; */
+  justify-content: center;
   flex-wrap: wrap;
   padding: 0 4px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 100px; */
+
 }
 .gallery p{
   text-align: center;
@@ -127,10 +196,12 @@ main h1{
     align-items: center;
 
   }
-
+/* Animation */
 .typewriter h1{
   /* align-items: center; */
   overflow: hidden;
+  font-family: "New Century Schoolbook", serif;
+  color: white;
   text-shadow: 2px 2px #A8A8A8;
   border-right: .15em solid #00274C;
   white-space: nowrap;
@@ -140,25 +211,65 @@ main h1{
     type 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
   }
+
+  @keyframes type{
+    from{width: 0}
+    to{width: 100%};
+  }
+
+  @keyframes blink-caret{
+    from, to {border-color: transparent}
+    50% {border-color: #00274C;}
+  }
 /* @-webkit-keyframes typewriter{
   from{width: 0;}
   to{width:100%;}
 
 } */
-
-@keyframes type{
-  from{width: 0}
-  to{width: 100%};
+.form{
+  padding: 50px;
 }
 
-@keyframes blink-caret{
-  from, to {border-color: transparent}
-  50% {border-color: #00274C;}
+fieldset{
+  box-shadow: 10px 10px 5px #b4b4b4;
 }
-/* .typewriter{
-  animation-name: typewriter;
-  duration: 3s;
-} */
+button{
+  padding: 12px 20px;
+  background-color: white;
+  color: #00274C;
+  width: 15%;
+  display: inline-block;
+  border: 2px solid #00274C;
+  text-align: center;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #00274C;
+  color: white;
+}
+
+input, textarea, select{
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #B0C4DE;
+  font-size: 16px;
+}
+input, select{
+  vertical-align: middle;
+}
+input{
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  text-align: start;
+  border-width: 2px;
+
+}
+
+
 
 
 
@@ -184,7 +295,7 @@ footer{
     padding: 20px;
   }
   .typewriter h1{
-    font-size: 35px;
+    font-size: 40px;
   }
   .nav_item{
     display: flex;
@@ -193,8 +304,9 @@ footer{
   .container{
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
+    padding-bottom: 50px;
   }
-  .gallery{
+   .gallery{
     flex: 100%;
     max-width: 100%;
     flex-direction: row;
@@ -226,14 +338,39 @@ footer{
     display: flex;
     text-decoration: none;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+  }
+  .typewriter h1{
+    font-size: 60px;
   }
   .nav_links{
     display: flex;
   }
-  .container{
-    grid-template-columns: 2fr 1fr 1fr;
+  .gallery{
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 150px;
   }
+  .gallery img{
+    width: 30%;
+    flex-wrap: wrap;
+  }
+  .container{
+    grid-template-columns: 1fr 1fr;
+  }
+  .container img{
+    width: 75%;
+  }
+  .container p{
+    line-height: 1.5;
+    align-self: stretch;
 
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  .typewriter h1{
+    animation: none;
+  }
 }

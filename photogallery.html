@@ -6,6 +6,16 @@
     <link rel= "stylesheet" type="text/css" href="css/style.css"/>
     <title> Abby Bogert</title>
     <script src="https://kit.fontawesome.com/f2cded3c7e.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160612085-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160612085-1');
+    </script>
+
 
   </head>
   <body>
@@ -26,7 +36,18 @@
     </header>
     <main>
       <h1> Abby Bogert's Photo Gallery </h1>
-      <div class = "gallery">
+        <div class = "flip-card">
+          <div class = "flip-card-inner">
+            <div class = "flip-card-front">
+              <img = src = "images/paw.png" alt = "paw"/>
+              <!-- <h1> Abby Bogert</h1> -->
+            </div>
+            <div class = "flip-card-back">
+              <p> Professional napper and squirrel chaser </p>
+            </div>
+          </div>
+        </div>
+        <div class = "gallery">
           <img src = "images/abby1.jpg" alt = "Abby's bathtime"/>
           <img src = "images/abby2.jpg" alt = "Abby with trigger point charts"/>
           <img src = "images/abby3.jpg" alt = "Abby with organge frisbee"/>
@@ -42,6 +63,7 @@
           <img src = "images/abby13.jpg" alt = "Abby and Grandma"/>
           <img src = "images/abby14.jpg" alt = "Muddy Abby"/>
           <img src = "images/abby15.jpg" alt = "Fall Abby"/>
+        </div>
 
 
       </div>

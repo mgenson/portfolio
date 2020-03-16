@@ -6,6 +6,16 @@
     <link rel= "stylesheet" type="text/css" href="css/style.css"/>
     <title> Abby Bogert</title>
     <script src="https://kit.fontawesome.com/f2cded3c7e.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160612085-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160612085-1');
+    </script>
+
 
   </head>
   <body>
@@ -24,27 +34,28 @@
         </ul>
       </nav>
     </header>
-    <form action = "https://formspree.io/xvoadgdj" method = "POST">
-      <fieldset >
-        <legend> Contact Form </legend>
-        <div class = "contact">
-          <label for="name">Name: </label><br>
-          <input type ="text" id = "name" name="name" placeholder= "Name"/><br><br>
-          <label for ="phone">Phone Number :</label><br>
-          <input type ="number" name='phone' placeholder="Phone Number"/><br><br>
-          <label for = "addr"> Address: </label><br>
-          <textarea type = "text" id = "addr" name = "address" placeholder ="Address"/></textarea><br><br>
-          <label for ="email"> Email: </label><br>
-          <input type = "email" id = "email" name = "email" placeholder = "Email"/><br><br>
-          <label for ="message"> Message: </label><br
-        </div>
-        <div>
-          <input type = "reset"/>
-          <input type = "submit"/>
-        </div>
+    <div class = "header">
+      <h1> Contact Me</h1>
 
-      </fieldset>
-    </form>
+      <div class="form">
+        <form action="https://formspree.io/maybepyy" method="POST">
+          <fieldset>
+            <label for = "fname">First Name:</label>
+            <input type = "text" id="fname" name = "first name" placeholder= "First Name"><br><br>
+
+            <label for ="lname">Last Name: </label>
+            <input type = "text" id = "lname" name = "last name" placeholder = "Last Name"><br><br>
+
+            <label for = "email">Email: </label>
+            <input type = "email" id="email" placeholder = "Email"><br><br>
+
+            <label for = "message">Message: </message>
+            <textarea id="message" placeholder = "Type Message"></textarea><br><br>
+
+            <button type = "submit">Submit</button>
+      </div>
+        </fieldset>
+      </form>
     <footer class = "footer">
       <p> University of Michican School of Information <br/>
         &copy; Maya Genson - Web Design 2020</p>
