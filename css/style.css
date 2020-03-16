@@ -78,6 +78,7 @@ ul{
   object-fit: cover;
   overflow: hidden;
   /* vertical-align: middle; */
+  height: auto;
   width: 75%;
   /* width: 100%;
   display: flex;
