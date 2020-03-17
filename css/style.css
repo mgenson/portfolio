@@ -289,9 +289,32 @@ button{
   text-align: center;
   cursor: pointer;
 }
+input[type=email]{
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 15px;
+}
 button:hover{
   background-color: #00274C;
   color: white;
+}
+input[type=text]:hover{
+  background-color: #00274C;
+  color: white;
+}
+input:hover::placeholder{
+  color: white;
+}
+textarea:hover::placeholder{
+  color:white;
+}
+
+input[type = email]:hover{
+  background-color: #00274C;
+  color: white;
+}
+textarea[id=message]:hover{
+  background-color: #00274C;
 }
 
 input, textarea, select{
