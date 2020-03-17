@@ -429,4 +429,16 @@ footer{
   .typewriter h1{
     animation: none;
   }
+  .flipcard{
+    animation: none;
+  }
+  .flipcard-front{
+    animation: none;
+  }
+  .flipcard-back{
+    animation: none;
+  }
+  .flipcard-inner{
+    animation: none;
+  }
 }
