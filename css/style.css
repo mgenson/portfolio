@@ -71,7 +71,6 @@ ul{
 }
 
 .gallery a{
-  /* width: 100%; */
   margin-top: 8px;
   flex-direction: column;
   justify-content: center;
@@ -83,10 +82,8 @@ ul{
   box-shadow: 5px 5px 2.5px #A8A8A8;
 }
 .gallery a img{
-  width: 100;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+
 }
 .gallery a:hover{
   /* opacity: 0.5; */
@@ -384,7 +381,7 @@ footer{
     padding-bottom: 150px;
   }
   .gallery a{
-    width: 100%;
+    width: 45%;
     flex-wrap: wrap;
   }
   .gallery a img{
@@ -434,7 +431,7 @@ footer{
     padding-bottom: 150px;
   }
   .gallery a{
-    width: 100%;
+    width: 30%;
     flex-wrap: wrap;
   }
   .gallery a img{
